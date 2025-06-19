@@ -114,7 +114,6 @@ body {
 }
 
 /* SLIDER */
-/* SLIDER */
 .slider {
     overflow: hidden;
     background-color: #001a33;
@@ -123,7 +122,7 @@ body {
 
 .slide-track {
     display: flex;
-    width: calc(300px * 12); /* desktop - suficiente para loop */
+    width: calc(300px * 12);
     animation: scrollDesktop 30s linear infinite;
 }
 
@@ -155,8 +154,8 @@ body {
     }
 
     .slide-track {
-        width: calc(80vw * 12); /* Mantém proporcional no mobile */
-        animation: scrollMobile 60s linear infinite;
+        width: calc(80vw * 12);
+        animation: scrollMobile 18s linear infinite; /* 🚨 Aqui ajustei de 12s para 18s */
     }
 
     @keyframes scrollMobile {
@@ -164,7 +163,6 @@ body {
         100% { transform: translateX(-50%); }
     }
 }
-
 /* TORRES */
 .torres {
     background-color: #b9c2cc;
