@@ -122,6 +122,7 @@ body {
 
 .slide-track {
     display: flex;
+    width: calc(400px * 6); /* Esse valor é só referência no desktop */
     animation: scroll 30s linear infinite;
 }
 
@@ -146,8 +147,12 @@ body {
     100% {transform: translateX(-50%);}
 }
 
-/* Velocidade mais rápida no mobile */
+/* Responsividade e aceleração no mobile */
 @media (max-width: 600px) {
+    .slide {
+        min-width: 80vw;
+    }
+
     .slide-track {
         animation: scroll 12s linear infinite;
     }
