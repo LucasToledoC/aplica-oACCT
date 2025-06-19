@@ -146,6 +146,13 @@ body {
     100% {transform: translateX(-50%);}
 }
 
+/* Velocidade mais rápida no mobile */
+@media (max-width: 600px) {
+    .slide-track {
+        animation: scroll 12s linear infinite;
+    }
+}
+
 /* TORRES */
 .torres {
     background-color: #b9c2cc;
