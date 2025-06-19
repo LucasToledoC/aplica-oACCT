@@ -155,7 +155,7 @@ body {
 
     .slide-track {
         width: calc(80vw * 12);
-        animation: scrollMobile 18s linear infinite; /* 🚨 Aqui ajustei de 12s para 18s */
+        animation: scrollMobile 22s linear infinite; /* 🚨 Aqui ajustei de 12s para 18s */
     }
 
     @keyframes scrollMobile {
