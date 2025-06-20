@@ -122,11 +122,12 @@ body {
 
 .slide-track {
     display: flex;
-    animation: scroll 30s linear infinite;
+    width: calc(300px * 12);
+    animation: scrollDesktop 30s linear infinite;
 }
 
 .slide {
-    min-width: 400px;
+    min-width: 300px;
     margin: 0 10px;
 }
 
@@ -141,11 +142,27 @@ body {
     transform: scale(1.03);
 }
 
-@keyframes scroll {
-    0% {transform: translateX(0);}
-    100% {transform: translateX(-50%);}
+@keyframes scrollDesktop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
+/* ----------- MOBILE ----------- */
+@media (max-width: 600px) {
+    .slide {
+        min-width: 80vw;
+    }
+
+    .slide-track {
+        width: calc(80vw * 12);
+        animation: scrollMobile 22s linear infinite; /* 🚨 Aqui ajustei de 12s para 18s */
+    }
+
+    @keyframes scrollMobile {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+}
 /* TORRES */
 .torres {
     background-color: #b9c2cc;
