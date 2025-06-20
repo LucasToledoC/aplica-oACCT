@@ -69,10 +69,90 @@ body {
     text-decoration: underline;
 }
 
+/* Responsividade do header */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .logo-container img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav li {
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+    }
+}
+
 /* Oculta o header se quebrar demais */
 @media (max-width: 420px) {
     .header {
         display: none;
+    }
+}
+
+/* Simplificação do header e hero para telas muito pequenas */
+@media (max-width: 480px) {
+    .header .container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    /* Esconde nav no header */
+    .nav {
+        display: none;
+    }
+
+    .logo-container {
+        gap: 5px;
+    }
+
+    .logo-container img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Hero - esconde benefícios */
+    .hero-content .benefits {
+        display: none;
+    }
+
+    /* Hero - ajusta título e texto */
+    .hero h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 15px;
     }
 }
 
@@ -86,6 +166,7 @@ body {
     text-align: center;
     color: white;
     position: relative;
+    padding: 0 15px;
 }
 
 .hero::after {
@@ -102,27 +183,28 @@ body {
 }
 
 .hero h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 30px;
 }
 
 .benefits {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
     justify-content: center;
 }
 
 .benefits div {
     background: rgba(255,255,255,0.1);
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 20px;
     border: 1px solid rgba(255,255,255,0.3);
+    font-size: 0.9rem;
 }
 
 /* SLIDER SOBREPOSTO AO HERO */
@@ -164,26 +246,31 @@ body {
     100% { transform: translateX(-50%); }
 }
 
-/* ----------- MOBILE ----------- */
+/* Responsividade do slider */
 @media (max-width: 768px) {
     .slide {
-        flex: 0 0 70%;
+        flex: 0 0 80%;
+    }
+
+    .slide img {
+        height: 180px;
+        object-fit: cover;
     }
 
     .slide-track {
         animation: scrollMobile 20s linear infinite;
     }
+}
 
-    @keyframes scrollMobile {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-    }
+@keyframes scrollMobile {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* TORRES */
 .torres {
     background-color: #b9c2cc;
-    padding: 40px 0;
+    padding: 40px 15px;
 }
 
 .torres .cards {
@@ -198,6 +285,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     flex: 1 1 300px;
+    max-width: 350px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
@@ -205,7 +293,7 @@ body {
 
 .card img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
@@ -215,30 +303,49 @@ body {
     transform: translateY(-5px);
 }
 
+@media (max-width: 768px) {
+    .torres .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .card img {
+        height: auto;
+        max-height: 250px;
+    }
+}
+
 /* SOBRE NÓS */
 .sobre {
     background-color: rgb(201, 208, 227);
-    padding: 50px 20px;
+    padding: 50px 15px;
     text-align: center;
 }
 
 .sobre h2 {
     margin-bottom: 20px;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .sobre p {
-    max-width: 900px;
+    max-width: 100%;
     margin: auto;
     line-height: 1.8;
-    font-size: 1.1rem;
+    font-size: 1rem;
     white-space: normal;
+    padding: 0 10px;
 }
 
 /* INFOS */
 .infos {
     background-color: white;
-    padding: 30px 0;
+    padding: 30px 15px;
 }
 
 .infos .container {
@@ -250,6 +357,8 @@ body {
 
 .infos-item {
     flex: 1 1 250px;
+    min-width: 200px;
+    margin-bottom: 20px;
 }
 
 .infos-item h4 {
@@ -258,14 +367,14 @@ body {
 
 /* GALERIA */
 .galeria {
-    padding: 40px 0;
+    padding: 40px 15px;
     background-color: #b9c2cc;
 }
 
 .galeria-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
 }
 
 .galeria-grid img {
@@ -283,12 +392,12 @@ body {
 .footer {
     background: #222;
     color: white;
-    padding: 40px 0;
+    padding: 40px 15px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
 }
 
@@ -306,16 +415,56 @@ body {
 }
 
 .footer img {
-    width: 80px;
+    max-width: 70px;
     display: block;
     margin-bottom: 10px;
 }
+
 .footer .fa-brands {
-    font-size: 2.5rem; /* aumenta o tamanho dos ícones */
+    font-size: 2.5rem;
     color: white;
     transition: color 0.3s ease;
 }
 
 .footer .fa-brands:hover {
-    color: #ddd; /* efeito hover sutil */
+    color: #ddd;
+}
+
+/* BOTÃO WHATSAPP FIXO */
+.whatsapp-button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #51ff00;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-button img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Ajuste botão whatsapp para telas maiores */
+@media (min-width: 769px) {
+    .whatsapp-button {
+        width: 120px;
+        height: 120px;
+        bottom: 20px;
+        right: 20px;
+    }
 }
