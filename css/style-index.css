@@ -36,6 +36,17 @@ body {
     flex-wrap: wrap;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 50px;
+    height: 50px;
+}
+
 .logo {
     color: white;
     font-size: 1.8rem;
@@ -67,7 +78,7 @@ body {
 
 /* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/torres-concluidas_thumb.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('../img/torres-concluidas_thumb.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -86,12 +97,13 @@ body {
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    margin-bottom: 60px;
 }
 
 .hero h2 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .hero p {
@@ -113,26 +125,31 @@ body {
     border: 1px solid rgba(255,255,255,0.3);
 }
 
-/* SLIDER */
+/* SLIDER SOBREPOSTO AO HERO */
 .slider {
     overflow: hidden;
-    background-color: #001a33;
-    padding: 20px 0;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    padding: 10px 0;
+    z-index: 2;
 }
 
 .slide-track {
     display: flex;
-    width: calc(300px * 12);
+    gap: 10px;
     animation: scrollDesktop 30s linear infinite;
 }
 
 .slide {
-    min-width: 300px;
-    margin: 0 10px;
+    flex: 0 0 30%;
 }
 
 .slide img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     transition: transform 0.3s ease;
@@ -148,14 +165,13 @@ body {
 }
 
 /* ----------- MOBILE ----------- */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .slide {
-        min-width: 80vw;
+        flex: 0 0 70%;
     }
 
     .slide-track {
-        width: calc(80vw * 12);
-        animation: scrollMobile 22s linear infinite; /* 🚨 Aqui ajustei de 12s para 18s */
+        animation: scrollMobile 20s linear infinite;
     }
 
     @keyframes scrollMobile {
@@ -163,6 +179,7 @@ body {
         100% { transform: translateX(-50%); }
     }
 }
+
 /* TORRES */
 .torres {
     background-color: #b9c2cc;
@@ -180,7 +197,7 @@ body {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    flex: 1 1 250px;
+    flex: 1 1 300px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
@@ -188,12 +205,34 @@ body {
 
 .card img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
 .card:hover {
     transform: translateY(-5px);
+}
+
+/* SOBRE NÓS */
+.sobre {
+    background-color: rgb(201, 208, 227);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.sobre h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.sobre p {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    white-space: normal;
 }
 
 /* INFOS */
@@ -270,4 +309,13 @@ body {
     width: 80px;
     display: block;
     margin-bottom: 10px;
+}
+.footer .fa-brands {
+    font-size: 2.5rem; /* aumenta o tamanho dos ícones */
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer .fa-brands:hover {
+    color: #ddd; /* efeito hover sutil */
 }
