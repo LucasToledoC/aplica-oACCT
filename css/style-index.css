@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 
 /* TORRES */
 .torres {
-    background-color: #f8f9fa;
+    background-color:rgb(143, 143, 143);
     padding: 40px 0;
 }
 
@@ -293,7 +293,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 
 /* INFOS */
 .infos {
-    background-color: #f8f9fa;
+    background-color:rgb(143, 143, 143);
     padding: 30px 0;
 }
 
@@ -344,7 +344,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 
 /* FOOTER */
 .footer {
-    background: #212529;
+    background: #1e1e1e;
     color: white;
     padding: 40px 0;
 }
