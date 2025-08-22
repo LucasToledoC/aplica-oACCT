@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 }
 
 .nav a:hover {
-    color: #FF8C00;
+    color: #e9ecef;
     text-decoration: underline;
 }
 
@@ -160,14 +160,14 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 
 /* TORRES */
 .torres {
-    background-color: #F5F5DC;
+    background-color: #f8f9fa;
     padding: 40px 0;
 }
 
 .torres h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #2C3E50;
+    color: #212529;
 }
 
 .torres .cards {
@@ -200,12 +200,12 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 }
 
 .card h3 {
-    color: #FF8C00;
+    color: #343a40;
 }
 
 /* ENGENHARIA E CONSTRUÇÃO */
 .engenharia {
-    background-color: #f5f7fa;
+    background-color: #e9ecef;
     padding: 60px 0;
 }
 
@@ -213,7 +213,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.5rem;
-    color: #182161;
+    color: #212529;
 }
 
 .engenharia-content {
@@ -228,7 +228,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 }
 
 .engenharia-text h3 {
-    color: #2d3d87;
+    color: #343a40;
     margin-bottom: 20px;
     font-size: 1.5rem;
 }
@@ -236,7 +236,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 .engenharia-text p {
     margin-bottom: 20px;
     line-height: 1.6;
-    color: #182161;
+    color: #495057;
 }
 
 .engenharia-text ul {
@@ -246,7 +246,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 
 .engenharia-text li {
     margin-bottom: 8px;
-    color: #182161;
+    color: #495057;
     font-weight: 500;
 }
 
@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 
 /* SOBRE NÓS */
 .sobre {
-    background-color: #F5F5F5;
+    background-color: #ffffff;
     padding: 50px 20px;
     text-align: center;
 }
@@ -280,7 +280,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 .sobre h2 {
     margin-bottom: 20px;
     font-size: 2.5rem;
-    color: #2C3E50;
+    color: #212529;
 }
 
 .sobre p {
@@ -288,12 +288,12 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
     margin: auto;
     line-height: 1.8;
     font-size: 1.1rem;
-    color: #2C3E50;
+    color: #495057;
 }
 
 /* INFOS */
 .infos {
-    background-color: #E6E6FA;
+    background-color: #f8f9fa;
     padding: 30px 0;
 }
 
@@ -310,19 +310,19 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 
 .infos-item h4 {
     margin-bottom: 10px;
-    color: #FF8C00;
+    color: #343a40;
 }
 
 /* GALERIA */
 .galeria {
     padding: 40px 0;
-    background-color: #F5F5DC;
+    background-color: #e9ecef;
 }
 
 .galeria h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #2C3E50;
+    color: #212529;
 }
 
 .galeria-grid {
@@ -344,7 +344,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 
 /* FOOTER */
 .footer {
-    background: #2C3E50;
+    background: #212529;
     color: white;
     padding: 40px 0;
 }
@@ -357,7 +357,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 
 .footer h4 {
     margin-bottom: 10px;
-    color: #FF8C00;
+    color: #e9ecef;
 }
 
 .footer a {
@@ -366,7 +366,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 }
 
 .footer a:hover {
-    color: #FF8C00;
+    color: #e9ecef;
 }
 
 .footer img {
@@ -382,7 +382,7 @@ h1, h2, h3, h4, h5, h6, .header .nav a, .whatsapp-button span {
 }
 
 .footer .fa-brands:hover {
-    color: #FF8C00;
+    color: #e9ecef;
 }
 
 /* BOTÃO WHATSAPP FIXO ESTILO BANNER COMPLETO */

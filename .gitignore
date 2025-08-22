@@ -13,3 +13,6 @@ Thumbs.db
 
 # System files
 *.log
+
+# Screenshots (demonstration only)
+monochromatic-*.png
